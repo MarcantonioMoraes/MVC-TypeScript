@@ -12,16 +12,16 @@ const controller = new ClienteController(view);
 router.get("/clients", (req, res) => controller.listarClientes(req, res));
 
 // Cadastro de clientes e solicitação de transferência:
-controller.cadastrarCliente("Thauan", "thauan@email.com", 1000);
-controller.cadastrarCliente("João", "jotinha@email.com", 500);
+controller.cadastrarCliente("Marcos", "marcos@email.com", 1000);
+controller.cadastrarCliente("Pedro", "pedro@email.com", 500);
 
 //controller.listarClientes();
 
-controller.transferirValor("thauan@email.com", "jotinha@email.com", 200);
+controller.transferirValor("marcos@email.com", "pedro@email.com", 200);
 
 //controller.listarClientes();
 
-controller.consultarCliente("thauan@email.com");
+controller.consultarCliente("marcos@email.com");
 
 app.use("/api", router);
 
